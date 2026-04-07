@@ -1,7 +1,8 @@
-FROM php:8.1-cli
+FROM php:8.2-cli
 
 WORKDIR /app
-
 COPY . .
 
-CMD ["php", "-S", "0.0.0.0:3000"]
+EXPOSE 8080
+
+CMD ["php", "-S", "0.0.0.0:8080", "bot.php"]
